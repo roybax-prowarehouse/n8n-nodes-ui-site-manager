@@ -22,7 +22,7 @@ export const siteOperations: INodeProperties[] = [
 						method: 'GET',
 						url: '/v1/devices',
 						qs: {
-							'hostIds[]': '={{ $parameter.additionalFields?.hostIds ? $parameter.additionalFields.hostIds.split(",").map(id => id.trim()) : undefined }},
+							'hostIds[]': '={{ $parameter.additionalFields?.hostIds ? $parameter.additionalFields.hostIds.split(",").map(id => id.trim()) : undefined }}',
 							time: '={{ $parameter.additionalFields?.time || undefined }}',
 							pageSize: '={{ $parameter.additionalFields?.pageSize || undefined }}',
 							nextToken: '={{ $parameter.additionalFields?.nextToken || undefined }}',
